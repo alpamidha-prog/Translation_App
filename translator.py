@@ -10,7 +10,7 @@ class VoiceTranslatorApp(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("VoiceFlow - AI Translator (EN <-> FI)")
+        self.title("ALPA - AI Translator (EN <-> FI)")
         self.geometry("700x600")
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")
@@ -36,7 +36,7 @@ class VoiceTranslatorApp(ctk.CTk):
         self.grid_rowconfigure(2, weight=1)
 
         # Header with Vibrant Theme Style
-        self.label_title = ctk.CTkLabel(self, text="Alpa", font=ctk.CTkFont(size=36, weight="bold"), text_color="#ff4b2b")
+        self.label_title = ctk.CTkLabel(self, text="ALPA", font=ctk.CTkFont(size=36, weight="bold"), text_color="#ff4b2b")
         self.label_title.grid(row=0, column=0, pady=(40, 10))
 
         # Toggle Frame
