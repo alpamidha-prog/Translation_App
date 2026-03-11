@@ -10,7 +10,7 @@ class VoiceTranslatorApp(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("VoiceFlow - AI Translator (EN <-> FI)")
+        self.title("Alpa - AI Translator (EN <-> FI)")
         self.geometry("700x600")
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")
