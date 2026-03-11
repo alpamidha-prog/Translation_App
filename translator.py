@@ -35,9 +35,9 @@ class VoiceTranslatorApp(ctk.CTk):
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(2, weight=1)
 
-        # Header with Red Theme Style
-        self.label_title = ctk.CTkLabel(self, text="Alpa", font=ctk.CTkFont(size=32, weight="bold"), text_color="#ff416c")
-        self.label_title.grid(row=0, column=0, pady=(30, 10))
+        # Header with Vibrant Theme Style
+        self.label_title = ctk.CTkLabel(self, text="Alpa", font=ctk.CTkFont(size=36, weight="bold"), text_color="#ff4b2b")
+        self.label_title.grid(row=0, column=0, pady=(40, 10))
 
         # Toggle Frame
         self.toggle_frame = ctk.CTkFrame(self, fg_color="transparent")
@@ -46,7 +46,7 @@ class VoiceTranslatorApp(ctk.CTk):
         self.label_en = ctk.CTkLabel(self.toggle_frame, text="English", font=ctk.CTkFont(size=14))
         self.label_en.grid(row=0, column=0, padx=15)
 
-        self.switch_toggle = ctk.CTkSwitch(self.toggle_frame, text="", variable=self.is_en_to_fi, onvalue=True, offvalue=False, progress_color="#ef4444", command=self.update_status_label)
+        self.switch_toggle = ctk.CTkSwitch(self.toggle_frame, text="", variable=self.is_en_to_fi, onvalue=True, offvalue=False, progress_color="#ff416c", button_color="#ef4444", command=self.update_status_label)
         self.switch_toggle.grid(row=0, column=1)
 
         self.label_fi = ctk.CTkLabel(self.toggle_frame, text="Finnish", font=ctk.CTkFont(size=14))
@@ -60,7 +60,7 @@ class VoiceTranslatorApp(ctk.CTk):
         self.button_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.button_frame.grid(row=3, column=0, pady=(0, 30))
 
-        self.start_button = ctk.CTkButton(self.button_frame, text="Start Listening", command=self.toggle_listening, fg_color="#ef4444", hover_color="#ff416c", font=ctk.CTkFont(weight="bold"))
+        self.start_button = ctk.CTkButton(self.button_frame, text="Start Listening", command=self.toggle_listening, fg_color="#ff416c", hover_color="#ff4b2b", font=ctk.CTkFont(weight="bold"))
         self.start_button.grid(row=0, column=0, padx=10)
 
         self.camera_button = ctk.CTkButton(self.button_frame, text="Open Camera", command=self.toggle_camera, fg_color="#334155", hover_color="#475569", font=ctk.CTkFont(weight="bold"))

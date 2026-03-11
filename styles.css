@@ -21,16 +21,21 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--bg-dark);
-    background-image: 
-        radial-gradient(at 0% 0%, rgba(239, 68, 68, 0.15) 0, transparent 50%), 
-        radial-gradient(at 50% 0%, rgba(255, 75, 43, 0.15) 0, transparent 50%), 
-        radial-gradient(at 100% 0%, rgba(255, 65, 108, 0.15) 0, transparent 50%);
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #ef4444, #ff4b2b);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: var(--text-primary);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
