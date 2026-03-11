@@ -7,8 +7,14 @@ const labelEn = document.getElementById('label-en');
 const labelFi = document.getElementById('label-fi');
 const srcBadge = document.getElementById('src-lang-badge');
 const destBadge = document.getElementById('dest-lang-badge');
+const cameraBtn = document.getElementById('camera-btn');
+const cameraFeed = document.getElementById('camera-feed');
+const cameraStatus = document.getElementById('camera-status');
+const cameraPlaceholder = document.getElementById('camera-placeholder');
 
 let isListening = false;
+let isCameraOn = false;
+let cameraStream = null;
 let recognition;
 
 // Initialize Speech Recognition
@@ -132,3 +138,41 @@ async function translateText(text) {
         translatedEl.innerText = "Network error";
     }
 }
+
+// Camera Functions
+async function toggleCamera() {
+    if (!isCameraOn) {
+        await startCamera();
+    } else {
+        stopCamera();
+    }
+}
+
+async function startCamera() {
+    try {
+        cameraStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+        cameraFeed.srcObject = cameraStream;
+        cameraFeed.style.display = 'block';
+        cameraPlaceholder.style.display = 'none';
+        cameraBtn.classList.add('active');
+        cameraStatus.innerText = "Close Camera";
+        isCameraOn = true;
+    } catch (error) {
+        console.error("Camera access error:", error);
+        cameraStatus.innerText = "Access Denied";
+    }
+}
+
+function stopCamera() {
+    if (cameraStream) {
+        cameraStream.getTracks().forEach(track => track.stop());
+    }
+    cameraFeed.srcObject = null;
+    cameraFeed.style.display = 'none';
+    cameraPlaceholder.style.display = 'block';
+    cameraBtn.classList.remove('active');
+    cameraStatus.innerText = "Open Camera";
+    isCameraOn = false;
+}
+
+cameraBtn.addEventListener('click', toggleCamera);
