@@ -21,7 +21,7 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--bg-dark);
-    background: linear-gradient(-45deg, #0f172a, #1e293b, #ef4444, #ff4b2b);
+    background: linear-gradient(-45deg, #1e293b, #334155, #f87171, #fb923c);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: var(--text-primary);
