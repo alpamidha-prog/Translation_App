@@ -11,6 +11,22 @@
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshot1.png" alt="Finnish to English Translation" width="400">
+  <br>
+  <em>Finnish to English Translation</em>
+</p>
+
+<p align="center">
+  <img src="screenshot2.png" alt="English to Finnish Translation" width="400">
+  <br>
+  <em>English to Finnish Translation</em>
+</p>
+
+---
+
 ## Features
 
 - **Bidirectional voice translation** — English ↔ Finnish, switchable via a toggle
