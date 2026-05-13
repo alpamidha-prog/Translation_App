@@ -35,8 +35,8 @@ class VoiceTranslatorApp(ctk.CTk):
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(2, weight=1)
 
-        # Header with Vibrant Theme Style
-        self.label_title = ctk.CTkLabel(self, text="ALPA", font=ctk.CTkFont(size=36, weight="bold"), text_color="#ff4b2b")
+        # Header with Lighter Vibrant Style
+        self.label_title = ctk.CTkLabel(self, text="ALPA", font=ctk.CTkFont(size=36, weight="bold"), text_color="#ff7675")
         self.label_title.grid(row=0, column=0, pady=(40, 10))
 
         # Toggle Frame
